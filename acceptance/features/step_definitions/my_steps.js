@@ -1,6 +1,7 @@
 const {Given, When, Then} = require("cucumber");
 const openUrl = require("../support/action/openUrl")
 const checkElementExists = require("../support/check/checkElementExists")
+const assert = require("assert")
 
 Given(/^that User goes to Video Site Project's HomePage$/, async function () {
     await openUrl.call(this, "http://localhost:8080/")
@@ -27,6 +28,8 @@ Then(/^User can see some of videos' title like$/, async function (arr) {
     // for every videoTitle given in the scenario
     // assert whether it is involved inside collected title array
     for (let [ videoTitle ] of arr.rawTable) {
-        expect(arr.rawTable.find((el) => el.includes(videoTitle))).toBeDefined();
+        let foundFlag = titles.includes(videoTitle)
+
+        assert.strictEqual(foundFlag, true)
     }
 });
