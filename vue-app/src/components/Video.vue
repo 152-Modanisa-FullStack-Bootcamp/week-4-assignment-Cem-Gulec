@@ -1,7 +1,7 @@
 <template>
   <div class="video-container">
     <img
-        id="video-image"
+        class="video-image"
         :src="imagePath"
         @mouseover="MouseOver"
         @mouseleave="MouseLeave"
@@ -59,7 +59,7 @@ export default {
   display: flex;
   margin-top: 5px;
 }
-#video-image{
+.video-image{
   width: 100%;
   height: 100%;
 }

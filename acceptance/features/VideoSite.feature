@@ -7,4 +7,9 @@ Feature: Video Site Project
     Then User can see some of videos' title like
       | Vue.js Course for Beginners [2021 Tutorial] |
       | Vue JS Crash Course                         |
-      | Vue 3 - What's New? What Changed?            |
+      | Vue 3 - What's New? What Changed?           |
+
+  Scenario: User should see video image change on hover
+    Given that User is on Video Site Project's HomePage
+    When User hovers "Vue.js Explained in 100 Seconds" video
+    Then User should see hovered image
