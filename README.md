@@ -1,3 +1,10 @@
+## TODO
+* 1st scenario: watch page, watchview var mı?, container var mı?
+* 2nd scenario: click event, query expect
+* 3rd scenario: given ikinciyle aynı, hover test, pact'ten alacak şekilde refactor
+* Pact direkt derslerdekiyle aynı
+* Benzer prod
+
 ```gherkin
 Feature: Video Site Project
   As Product Owner I want to surf on our video site project
